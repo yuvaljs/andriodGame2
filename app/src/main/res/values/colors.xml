@@ -3,10 +3,10 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lime700">#AFB42B</color>
-    <color name="green">#ff00ff00</color>
-    <color name="red">#ffff0000</color>
-    <color name="yellowA100">#FFFF8D</color>
-    <color name="tealA200">#64FFDA</color>
+    <color name="lime700">#FFAFB42B</color>
+    <color name="green">#FF00ff00</color>
+    <color name="red">#FFFF0000</color>
+    <color name="yellowA100">#FFFFFF8D</color>
+    <color name="tealA200">#FF64FFDA</color>
 
 </resources>

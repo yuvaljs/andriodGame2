@@ -13,12 +13,13 @@
         android:id="@+id/end_game_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/default_margin_36dp"
         android:textStyle="bold"
-        android:textSize="50sp"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/text_size_50sp"
 
 
 
@@ -29,12 +30,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/tealA200"
+
+
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="@dimen/big_margin_100dp"
         android:text="@string/play_again"
-        android:textSize="50sp"
+        android:textSize="@dimen/text_size_50sp"
         android:textStyle="bold"
+
+
         />
 
 </RelativeLayout>
