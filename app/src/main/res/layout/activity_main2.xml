@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tealA200"
+    tools:context=".MainActivity2">
+
+
+
+    <ImageView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/spongebob_squarepants_2"
+
+        />
+
+    <ImageButton
+        android:id="@+id/main_button_right"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/baseline_arrow_forward_ios_24"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="25dp"
+
+        />
+    <ImageButton
+        android:id="@+id/main_button_left"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/baseline_arrow_back_ios_new_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="50dp"
+         />
+
+
+
+
+
+
+
+    <ImageView android:id="@+id/view_0_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_0_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_0_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_0_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <ImageView android:id="@+id/view_1_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_1_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_1_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_1_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <ImageView android:id="@+id/view_2_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_2_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_2_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_2_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <ImageView android:id="@+id/view_3_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_3_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_3_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_3_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <ImageView android:id="@+id/view_4_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_4_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_4_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_4_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <ImageView android:id="@+id/view_5_0" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_5_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_5_2" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@+id/view_5_3" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_compat_heart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<TextView
+    android:layout_alignParentLeft="true"
+    android:id="@+id/text_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="50sp"
+    android:textStyle="bold"
+    />
+
+
+
+</RelativeLayout >
