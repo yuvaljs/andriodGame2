@@ -3,7 +3,7 @@ package aaaa.dfs;
 
 public class GameMenger {
 
-    final public int ROW = 6,COL = 4,START_NUMBER_OF_LIVES = 3,PLAYER_START_POSITION = 0;
+    final public int ROW = 6,COL = 4,START_NUMBER_OF_LIVES = 3,PLAYER_START_POSITION = 0,BEST_SCORE = 100;
     private int playerPosition = PLAYER_START_POSITION,  numOfLives = START_NUMBER_OF_LIVES, score = 0;
 
 
@@ -46,8 +46,8 @@ public GameMenger() {
             }
         }
 
-        int i = 4;
-        if(needToAddBomb&&score<=95) {
+        int i = COL;
+        if(needToAddBomb&&score <= BEST_SCORE - ROW) {
             needToAddBomb = false;
             i =  (int)(Math.random() * COL);
         }else needToAddBomb = true;
@@ -60,7 +60,7 @@ public GameMenger() {
             gameMat[ROW - 1][playerPosition] = false;
             numOfLives--;
         }
-        if (numOfLives == 0||score>=100)
+        if (numOfLives == 0||score>=BEST_SCORE)
             gameStatus = false;
 
 

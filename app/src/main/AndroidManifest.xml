@@ -25,9 +25,6 @@
             android:name=".MainActivity3GameOver"
             android:exported="false" />
         <activity
-            android:name=".activityExperiment"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity2"
             android:exported="false" />
     </application>

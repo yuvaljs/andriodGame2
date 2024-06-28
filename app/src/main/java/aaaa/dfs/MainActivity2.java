@@ -7,32 +7,32 @@ import android.os.Handler;
 
 import android.util.DisplayMetrics;
 
-import android.util.Log;
+//import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 //import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 public class MainActivity2 extends AppCompatActivity {
-      GameMenger gameMenger;// = new GameMenger();
-   // ImageView view;
-   private  ImageButton buttonRight, buttonLeft;
+    private GameMenger gameMenger;
 
-    TextView text_score;
-   private ImageView playerView;
-    final public int ROW = 6,COL = 4, DELAY = 170,START_NUMBER_OF_LIVES =3 ;
+    private AppCompatImageButton buttonRight, buttonLeft;
 
-     int screenWidth,screenHeight,startPositionX, startPositionY;
-      ImageView[][] gameMat = new ImageView[ROW][COL];
+    private TextView text_score;
+    private ImageView playerView;
+    final public int ROW = 6, COL = 4, DELAY = 170, START_NUMBER_OF_LIVES = 3;
 
-   private LinearLayoutCompat linear_layout_compat_heart;
-     AppCompatImageView[]  heartsArr;
+    private int screenWidth, screenHeight, startPositionX, startPositionY;
+    private ImageView[][] gameMat = new ImageView[ROW][COL];
+
+    private LinearLayoutCompat linear_layout_compat_heart;
+    private AppCompatImageView[] heartsArr;
 
     final public Handler handler = new Handler();
     Runnable runnable = new Runnable() {
@@ -41,57 +41,29 @@ public class MainActivity2 extends AppCompatActivity {
 
             gameMenger.updateGame();
             update_graphics();
-            if(gameMenger.getGameStatus())handler.postDelayed(this, DELAY);
+            if (gameMenger.getGameStatus()) handler.postDelayed(this, DELAY);
         }
     };
 
 
-
-
-     @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId")
 
     public void onCreate(Bundle savedInstanceState) {
-
-
-
-
         super.onCreate(savedInstanceState);
-        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-         DisplayMetrics metrics = new DisplayMetrics();
-         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-         screenWidth =  metrics.widthPixels;
-         screenHeight = metrics.heightPixels;
 
-        findViews();
-         start();
+        DisplayMetrics metrics = new DisplayMetrics();   //Calculate the screen proportions
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        screenWidth = metrics.widthPixels;
+        screenHeight = metrics.heightPixels;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-    public void start() {
         gameMenger = new GameMenger();
-
-
-
+        findViews();
         initviews();
+
         handler.post(runnable);
-
-
     }
+
 
     private void update_graphics() {
         boolean[][] mengerMat = gameMenger.gameMat;
@@ -101,24 +73,21 @@ public class MainActivity2 extends AppCompatActivity {
             }
         }
         int numOfLives = gameMenger.getNumOfLives();
-        for (int i =numOfLives;i<START_NUMBER_OF_LIVES;i++)
-        {
+        for (int i = numOfLives; i < START_NUMBER_OF_LIVES; i++) {
             heartsArr[i].setVisibility(View.INVISIBLE);
         }
 
-        text_score.setText("score:"+gameMenger.getScore());
+        text_score.setText("score:" + gameMenger.getScore());
 
         if (!gameMenger.getGameStatus()) {
 
             int score = gameMenger.getScore();
 
 
-
-            Intent intent = new Intent(MainActivity2.this,MainActivity3GameOver.class);
+            Intent intent = new Intent(MainActivity2.this, MainActivity3GameOver.class);
             intent.putExtra("score", score);
             startActivity(intent);
             finish();
-
 
 
         }
@@ -127,41 +96,52 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     private void initviews() {
+        startPositionX = -screenWidth / 2 + (screenWidth / COL / 2);
+        startPositionY = -screenHeight / 2 + (screenHeight / (ROW + 1) / 2);
+
+
+        buttonRight.setScaleX(1 / (float) (COL));
+        buttonRight.setScaleY(1 / (float) (ROW + 1));
+        buttonRight.setX(startPositionX + (screenWidth / (float) (COL) * (COL - 1.5f)));
+        buttonRight.setY(startPositionY + (screenHeight / (float) (ROW + 1) * (ROW)));
+
+        buttonLeft.setScaleX(1 / (float) (COL));
+        buttonLeft.setScaleY(1 / (float) (ROW + 1));
+
+
+        buttonLeft.setX(startPositionX + screenWidth / (float) (COL) * 0.5f);
+        buttonLeft.setY(startPositionY + screenHeight / (float) (ROW + 1) * (ROW));
+
 
         buttonRight.setOnClickListener(v -> moveRight());
-        buttonLeft.setOnClickListener(v ->moveleft());
-        startPositionX = -screenWidth/2+(screenWidth/COL/2);
-        startPositionY =  -screenHeight/2+(screenHeight/(ROW+1)/2);
+        buttonLeft.setOnClickListener(v -> moveLeft());
 
 
-        playerView.setScaleX(1/(float)COL);
-        playerView.setScaleY(1/(float)(ROW+1));
+        playerView.setScaleX(1 / (float) COL);
+        playerView.setScaleY(1 / (float) (ROW + 1));
 
-        playerView.setY(startPositionY+(float)(screenWidth/3)*4);
+        playerView.setY(startPositionY + (screenHeight / (float) (ROW + 1)) * (ROW - 1));
         updatePlayerPosition(gameMenger.PLAYER_START_POSITION);
 
 
         for (int r = 0; r < ROW; r++) {
             for (int c = 0; c < COL; c++) {
 
-                gameMat[r][c].setScaleX(1 / (float)COL);
-                gameMat[r][c].setScaleY(1 / (float)(ROW+1));
+                gameMat[r][c].setScaleX(1 / (float) COL);
+                gameMat[r][c].setScaleY(1 / (float) (ROW + 1));
                 gameMat[r][c].setImageResource(R.drawable.bomb_svgrepo_com);
-                gameMat[r][c].setX(startPositionX + (screenWidth /(float) COL)*c );
-                gameMat[r][c].setY(startPositionY + (screenHeight /(float)(ROW+1))*r);
+                gameMat[r][c].setX(startPositionX + (screenWidth / (float) COL) * c);
+                gameMat[r][c].setY(startPositionY + (screenHeight / (float) (ROW + 1)) * r);
             }
 
         }
-        linear_layout_compat_heart.setScaleX(1/(float)COL*2);
-        linear_layout_compat_heart.setScaleY(1/(float)(ROW+1)*2);
-        linear_layout_compat_heart.setX(-screenWidth/2+(screenWidth/COL)+ screenWidth/(float)COL*(COL-2)) ;//+ screenWidth/(float)COL*(COL-1));
-        linear_layout_compat_heart.setY(-screenHeight/2+(screenHeight/ROW)*3/4f);
+        linear_layout_compat_heart.setScaleX(1 / (float) COL * 2);
+        linear_layout_compat_heart.setScaleY(1 / (float) (ROW + 1) * 2);
+        linear_layout_compat_heart.setX(-screenWidth / 2f + (screenWidth / (float) COL) + screenWidth / (float) COL * (COL - 2));//+ screenWidth/(float)COL*(COL-1));
+        linear_layout_compat_heart.setY(-screenHeight / 2f + (screenHeight / (float) ROW) * 3 / 4f);
 
 
-        text_score.setText("score:"+0);
-
-
-
+        text_score.setText("score:" + 0);
 
 
     }
@@ -169,8 +149,7 @@ public class MainActivity2 extends AppCompatActivity {
     private void findViews() {
         buttonRight = findViewById(R.id.main_button_right);
         buttonLeft = findViewById(R.id.main_button_left);
-        playerView =findViewById(R.id.view);
-       // view.setImageResource(R.drawable.spongebob_squarepants_2);
+        playerView = findViewById(R.id.view);
 
 
         gameMat[0][0] = findViewById(R.id.view_0_0);
@@ -193,12 +172,10 @@ public class MainActivity2 extends AppCompatActivity {
         gameMat[3][2] = findViewById(R.id.view_3_2);
         gameMat[3][3] = findViewById(R.id.view_3_3);
 
-
         gameMat[4][0] = findViewById(R.id.view_4_0);
         gameMat[4][1] = findViewById(R.id.view_4_1);
         gameMat[4][2] = findViewById(R.id.view_4_2);
         gameMat[4][3] = findViewById(R.id.view_4_3);
-
 
         gameMat[5][0] = findViewById(R.id.view_5_0);
         gameMat[5][1] = findViewById(R.id.view_5_1);
@@ -206,36 +183,24 @@ public class MainActivity2 extends AppCompatActivity {
         gameMat[5][3] = findViewById(R.id.view_5_3);
 
 
-
         linear_layout_compat_heart = findViewById(R.id.linear_layout_compat_heart);
         heartsArr = new AppCompatImageView[]{findViewById(R.id.main_IMG_heart1), findViewById(R.id.main_IMG_heart2), findViewById(R.id.main_IMG_heart3),};
         text_score = findViewById(R.id.text_score);
-
-
-
-
-
-
-
-      //  view.setX(screenWidth);
-
-
-
-
-
     }
 
-    private void updatePlayerPosition(int i)
-    {
-        playerView.setX(startPositionX+ screenWidth/(float)COL*i);
+    private void updatePlayerPosition(int i) {
+        playerView.setX(startPositionX + (screenWidth / (float) COL) * i);
     }
+
     private void moveRight() {
         updatePlayerPosition(gameMenger.moveRight());
 
 
     }
-    private void moveleft() {
+
+    private void moveLeft() {
         updatePlayerPosition(gameMenger.moveLeft());
 
-    }}
+    }
+}
 
