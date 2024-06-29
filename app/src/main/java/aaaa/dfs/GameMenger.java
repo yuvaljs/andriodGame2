@@ -9,13 +9,13 @@ public class GameMenger {
 
 
 
-    boolean needToAddBomb = true, gameStatus = true;
+   private boolean needToAddBomb = true, gameStatus = true;
 
     public int getScore() {
         return score;
     }
 
-    boolean gameMat[][] = new boolean[ROW][COL];
+   private boolean gameMat[][] = new boolean[ROW][COL];
 
 
 
@@ -30,7 +30,7 @@ public class GameMenger {
     public boolean getGameStatus() {
         return gameStatus;
     }
-//final public int DELAY = 100;
+
 public GameMenger() {
     for (int r = 0; r < gameMat.length; r++) {
         for (int c = 0; c < gameMat[1].length; c++) {

@@ -66,7 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     private void update_graphics() {
-        boolean[][] mengerMat = gameMenger.gameMat;
+        boolean[][] mengerMat = gameMenger.getGameMat();
         for (int r = 0; r < ROW; r++) {
             for (int c = 0; c < COL; c++) {
                 gameMat[r][c].setVisibility(mengerMat[r][c] ? View.VISIBLE : View.INVISIBLE);
@@ -107,8 +107,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         buttonLeft.setScaleX(1 / (float) (COL));
         buttonLeft.setScaleY(1 / (float) (ROW + 1));
-
-
         buttonLeft.setX(startPositionX + screenWidth / (float) (COL) * 0.5f);
         buttonLeft.setY(startPositionY + screenHeight / (float) (ROW + 1) * (ROW));
 
