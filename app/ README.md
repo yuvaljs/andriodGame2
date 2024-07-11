@@ -14,8 +14,8 @@
 - table of records - go MainActivityRecords
 - start game - start game, go MainActivity2
 
-<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8" width="150">
-<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/4de85d69-dd37-40c5-b6f9-e2688f96e4bd" width="150">
+<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8" width="200">
+<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/4de85d69-dd37-40c5-b6f9-e2688f96e4bd" width="200">
 
 
 
