@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background_fragment_list"
+
+    tools:context=".fragments.ListFragment">
+
+
+
+
+
+<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+android:id="@+id/go_back_main_activity_button"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+
+android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+android:layout_margin="15dp"
+android:text="back "
+    android:textStyle="bold"
+android:textSize="30dp"
+android:textAllCaps="true"
+    />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_recycler_view"
+        android:layout_alignParentRight="true"
+
+
+        />
+
+</RelativeLayout>

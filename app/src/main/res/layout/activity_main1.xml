@@ -14,29 +14,85 @@
         android:layout_height="wrap_content"
         android:text="welcome"
         android:id = "@+id/main_LBL_abc_time"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/big_margin_100dp"
         android:textSize="64sp"
         android:textStyle="bold"
         android:textColor="@color/lime700"
 
         />
+
+
+
+
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/start_game"
-
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/green"
-        android:text="start game"
-
+        android:id="@+id/start_game_button"
         android:textStyle="bold"
-        android:textSize="32sp"
-
-
+        android:textColor="#00A863"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+       android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="@string/start_game"
+        android:backgroundTint="@color/tealA200"
 
         />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/table_of_records_button"
+        android:textStyle="bold"
+        android:textColor="#00A863"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="Table of records"
+        android:backgroundTint="@color/tealA200"
+
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/sensors_mode_button"
+        android:textStyle="bold"
+        android:textColor="#00A863"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="185dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="Sensors mode "
+        android:backgroundTint="@color/tealA200"
+
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttons_mode_button"
+        android:textStyle="bold"
+        android:textColor="#00A863"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="270dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="Buttons mode "
+        android:backgroundTint="@color/tealA200"
+
+        />
+
+
+
+
+
+
+
 
 
 

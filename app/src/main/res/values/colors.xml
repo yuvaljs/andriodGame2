@@ -8,5 +8,24 @@
     <color name="red">#FFFF0000</color>
     <color name="yellowA100">#FFFFFF8D</color>
     <color name="tealA200">#FF64FFDA</color>
+    <color name="cyanA400">#00E5FF</color>
+    <color name="cyanA700">#00B8D4</color>
+    <color name="grey_400">#BDBDBD</color>
+
+
+
+
+    <color name="red_100">#FFCDD2</color>
+    <color name="pink_100">#F8BBD0</color>
+    <color name="purple_100">#E1BEE7</color>
+    <color name="deep_purple_100">#D1C4E9</color>
+    <color name="indigo_100">#C5CAE9</color>
+    <color name="blue_100">#BBDEFB</color>
+    <color name="light_blue_100">#BBDEFB</color>
+    <color name="cyan_100">#B2EBF2</color>
+    <color name="teal_100">#B2DFDB</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="lime_100">#F0F4C3</color>
+
 
 </resources>

@@ -25,18 +25,21 @@
 
         />
 
-    <Button
-        android:id="@+id/play_again_button"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/play_again_button1"
         android:layout_alignParentBottom="true"
-
-
+        android:backgroundTint="#C8E6C9"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/big_margin_100dp"
         android:text="@string/play_again"
         android:textSize="@dimen/text_size_50sp"
+        android:textColor="#00BCD4"
         android:textStyle="bold"
+        android:visibility="invisible"
 
 
         />
