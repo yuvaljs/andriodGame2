@@ -12,8 +12,8 @@
 
 ## Screenshots
 
-<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8" width="100">
-![screenShot1](https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8 100x20)
+<img src="https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8" width="150">
+
 
 
    
