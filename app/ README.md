@@ -11,7 +11,7 @@
 
 ## Screenshots
 
-![screenShot1]((https://drive.google.com/file/d/16_C43vOjFuTx_v1wvR3hPZQrPa0-hO-O/view?usp=drive_link)
+[screenShot1]((https://drive.google.com/file/d/16_C43vOjFuTx_v1wvR3hPZQrPa0-hO-O/view?usp=drive_link)
 
 
 
