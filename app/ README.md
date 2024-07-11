@@ -1,3 +1,4 @@
+
 #    Homework 2
 
 - The project is a game You need to drive a car in such a way that it avoids bombs and collect coins.
@@ -11,8 +12,8 @@
 
 ## Screenshots
 
-![screenShot](https://drive.google.com/file/d/16_C43vOjFuTx_v1wvR3hPZQrPa0-hO-O/view?usp=drive_link)
 
+![screenShot1](https://github.com/yuvaljs/andriodGame2/assets/159685242/1a597b7a-e519-4569-95a8-fae9e1c3cee8)
 
 
    
