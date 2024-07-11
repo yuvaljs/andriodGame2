@@ -3,7 +3,6 @@ package aaaa.dfs;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.util.Log;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,22 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         findViews();
         initViews();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

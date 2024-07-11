@@ -2,17 +2,16 @@ package aaaa.dfs;
 
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
+
+
 import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import android.Manifest;
 
 
@@ -31,7 +30,6 @@ import com.google.gson.Gson;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import aaaa.dfs.model.Coordinates;
 import aaaa.dfs.model.Record;
 import aaaa.dfs.model.RecordList;
 import aaaa.dfs.utilities.SharedPreferencesManager;
@@ -44,12 +42,6 @@ public class MainActivity3GameOver extends AppCompatActivity  {
 
     private RecordList recordList;
     ExtendedFloatingActionButton play_again_button ;
-    Coordinates coordinates;
-
-
-    // Check if the location permissions are already available.
-
-    // Handle the permission request response.
 
 
     private void getLocationPermission() {

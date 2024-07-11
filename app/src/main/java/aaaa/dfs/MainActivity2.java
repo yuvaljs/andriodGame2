@@ -2,9 +2,9 @@ package aaaa.dfs;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
+
+
+
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -15,8 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -110,19 +109,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         handler.post(runnable);
     }
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//
-//        positionDetector.stop();
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        positionDetector.start();
-//    }
 
 
     private void updateGraphics() {
